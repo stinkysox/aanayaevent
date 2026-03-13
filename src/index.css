@@ -6,59 +6,96 @@
 
 @layer base {
   :root {
-    --background: 25 30% 92%;
-    --foreground: 14 60% 15%;
+    /* ========================================
+       🎨 EDITABLE BRAND PALETTE
+       Change these 6 values to re-theme the entire site.
+       All other tokens derive from these.
+       ======================================== */
 
-    --card: 25 25% 94%;
-    --card-foreground: 14 60% 15%;
+    /* Base brand color (Deep Brown #511d10) — H:14 S:68% L:19% */
+    --brand-hue: 14;
+    --brand-sat: 68%;
+    --brand-light: 19%;
 
-    --popover: 25 30% 92%;
-    --popover-foreground: 14 60% 15%;
+    /* Base cream background (#f2e9e0) — H:25 S:30% L:92% */
+    --cream-hue: 25;
+    --cream-sat: 30%;
+    --cream-light: 92%;
 
-    --primary: 14 68% 19%;
-    --primary-foreground: 25 30% 92%;
+    /* Accent warm shift (champagne/beige direction) */
+    --accent-hue: 30;
+    --accent-sat: 25%;
 
-    --secondary: 25 20% 85%;
-    --secondary-foreground: 14 40% 25%;
+    /* ========================================
+       DERIVED TOKENS — auto-generated from brand palette
+       ======================================== */
 
-    --muted: 25 15% 88%;
-    --muted-foreground: 14 20% 45%;
+    /* Core */
+    --background: var(--cream-hue) var(--cream-sat) var(--cream-light);
+    --foreground: var(--brand-hue) 60% 15%;
 
-    --accent: 30 25% 80%;
-    --accent-foreground: 14 50% 20%;
+    /* Cards & Popovers */
+    --card: var(--cream-hue) 25% 94%;
+    --card-foreground: var(--brand-hue) 60% 15%;
+    --popover: var(--cream-hue) var(--cream-sat) var(--cream-light);
+    --popover-foreground: var(--brand-hue) 60% 15%;
 
+    /* Primary (brand color) */
+    --primary: var(--brand-hue) var(--brand-sat) var(--brand-light);
+    --primary-foreground: var(--cream-hue) var(--cream-sat) var(--cream-light);
+
+    /* Secondary */
+    --secondary: var(--cream-hue) 20% 85%;
+    --secondary-foreground: var(--brand-hue) 40% 25%;
+
+    /* Muted */
+    --muted: var(--cream-hue) 15% 88%;
+    --muted-foreground: var(--brand-hue) 20% 45%;
+
+    /* Accent */
+    --accent: var(--accent-hue) var(--accent-sat) 80%;
+    --accent-foreground: var(--brand-hue) 50% 20%;
+
+    /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 25 20% 82%;
-    --input: 25 20% 82%;
-    --ring: 14 68% 19%;
+    /* Borders & Input */
+    --border: var(--cream-hue) 20% 82%;
+    --input: var(--cream-hue) 20% 82%;
+    --ring: var(--brand-hue) var(--brand-sat) var(--brand-light);
 
     --radius: 0.25rem;
 
-    --sidebar-background: 25 25% 94%;
-    --sidebar-foreground: 14 40% 25%;
-    --sidebar-primary: 14 68% 19%;
-    --sidebar-primary-foreground: 25 30% 92%;
-    --sidebar-accent: 25 20% 85%;
-    --sidebar-accent-foreground: 14 50% 20%;
-    --sidebar-border: 25 20% 82%;
-    --sidebar-ring: 14 68% 19%;
+    /* Sidebar */
+    --sidebar-background: var(--cream-hue) 25% 94%;
+    --sidebar-foreground: var(--brand-hue) 40% 25%;
+    --sidebar-primary: var(--brand-hue) var(--brand-sat) var(--brand-light);
+    --sidebar-primary-foreground: var(--cream-hue) var(--cream-sat) var(--cream-light);
+    --sidebar-accent: var(--cream-hue) 20% 85%;
+    --sidebar-accent-foreground: var(--brand-hue) 50% 20%;
+    --sidebar-border: var(--cream-hue) 20% 82%;
+    --sidebar-ring: var(--brand-hue) var(--brand-sat) var(--brand-light);
 
     /* Custom tokens */
     --champagne: 33 30% 82%;
     --warm-gray: 20 10% 60%;
-    --deep-cream: 28 35% 90%;
+    --deep-cream: var(--cream-hue) 35% 90%;
     --editorial-spacing: 1.8;
 
-    /* Section alternating colors */
-    --section-warm: 30 40% 86%;
-    --section-warm-foreground: 14 60% 15%;
-    --section-dark: 14 68% 14%;
-    --section-dark-foreground: 30 30% 90%;
-    --section-dark-muted: 25 15% 65%;
+    /* ========================================
+       SECTION ALTERNATING COLORS
+       Warm (beige), Dark (inverted), Champagne
+       ======================================== */
+    --section-warm: var(--accent-hue) 40% 86%;
+    --section-warm-foreground: var(--brand-hue) 60% 15%;
+
+    --section-dark: var(--brand-hue) var(--brand-sat) 14%;
+    --section-dark-foreground: var(--accent-hue) 30% 90%;
+    --section-dark-muted: var(--cream-hue) 15% 65%;
+
     --section-champagne: 35 35% 89%;
-    --section-champagne-foreground: 14 60% 15%;
+    --section-champagne-foreground: var(--brand-hue) 60% 15%;
   }
 
   .dark {
