@@ -20,7 +20,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-section-dark text-section-dark-foreground">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <span className="editorial-subheading block mb-16">Voices</span>

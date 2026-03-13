@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-section-warm text-section-warm-foreground">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
           <span className="editorial-subheading block mb-6">Begin</span>

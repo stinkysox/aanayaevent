@@ -12,7 +12,7 @@ const stories = [
 
 const PortfolioSection = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-section-dark text-section-dark-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <span className="editorial-subheading block mb-4">Event Stories</span>

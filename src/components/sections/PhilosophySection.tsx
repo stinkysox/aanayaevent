@@ -3,7 +3,7 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 
 const PhilosophySection = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-section-warm text-section-warm-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Text block */}

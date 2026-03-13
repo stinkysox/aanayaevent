@@ -10,7 +10,7 @@ const atelierItems = [
 
 const DecorAtelierSection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-section-champagne text-section-champagne-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Right text - appears first on mobile */}

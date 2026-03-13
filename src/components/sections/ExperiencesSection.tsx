@@ -22,7 +22,7 @@ const experiences = [
 
 const ExperiencesSection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-section-champagne text-section-champagne-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
           <span className="editorial-subheading block mb-4">Signature Experiences</span>
