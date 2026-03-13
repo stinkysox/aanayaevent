@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
           {testimonials.map((t, i) => (
             <ScrollReveal key={i} delay={i * 150}>
               <blockquote>
-                <p className="font-serif text-2xl md:text-4xl lg:text-5xl text-foreground font-light leading-tight italic mb-8">
+                <p className="font-serif text-2xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8">
                   "{t.quote}"
                 </p>
                 <footer>
