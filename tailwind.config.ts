@@ -54,6 +54,13 @@ export default {
         champagne: "hsl(var(--champagne))",
         "warm-gray": "hsl(var(--warm-gray))",
         "deep-cream": "hsl(var(--deep-cream))",
+        "section-warm": "hsl(var(--section-warm))",
+        "section-warm-foreground": "hsl(var(--section-warm-foreground))",
+        "section-dark": "hsl(var(--section-dark))",
+        "section-dark-foreground": "hsl(var(--section-dark-foreground))",
+        "section-dark-muted": "hsl(var(--section-dark-muted))",
+        "section-champagne": "hsl(var(--section-champagne))",
+        "section-champagne-foreground": "hsl(var(--section-champagne-foreground))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
