@@ -90,6 +90,14 @@
     --champagne: 30 15% 30%;
     --warm-gray: 20 8% 45%;
     --deep-cream: 20 15% 14%;
+
+    --section-warm: 20 20% 18%;
+    --section-warm-foreground: 30 30% 90%;
+    --section-dark: 14 50% 8%;
+    --section-dark-foreground: 30 30% 90%;
+    --section-dark-muted: 25 15% 55%;
+    --section-champagne: 25 15% 16%;
+    --section-champagne-foreground: 30 30% 90%;
   }
 }
 
