@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
     <section className="section-padding bg-section-dark text-section-dark-foreground">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <span className="editorial-subheading block mb-16">Voices</span>
+          <span className="editorial-subheading block mb-16 text-section-dark-muted">Voices</span>
         </ScrollReveal>
 
         <div className="space-y-24">
