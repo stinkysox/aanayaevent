@@ -10,6 +10,7 @@ import Portfolio from "./pages/Portfolio.tsx";
 import Destinations from "./pages/Destinations.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
