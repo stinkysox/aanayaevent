@@ -34,8 +34,8 @@ const TestimonialsSection = () => {
                   "{t.quote}"
                 </p>
                 <footer>
-                  <cite className="editorial-subheading not-italic block mb-1 text-foreground">
-                    {t.author}
+                   <cite className="editorial-subheading not-italic block mb-1">
+                     {t.author}
                   </cite>
                   <span className="editorial-body text-xs">{t.location}</span>
                 </footer>
