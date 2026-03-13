@@ -15,8 +15,8 @@ const PortfolioSection = () => {
     <section className="section-padding bg-section-dark text-section-dark-foreground">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <ScrollReveal>
-          <span className="editorial-subheading block mb-4">Event Stories</span>
-          <h2 className="editorial-heading text-3xl md:text-5xl text-foreground mb-16 md:mb-24">
+          <span className="editorial-subheading block mb-4 text-section-dark-muted">Event Stories</span>
+          <h2 className="editorial-heading text-3xl md:text-5xl mb-16 md:mb-24">
             Recent Celebrations
           </h2>
         </ScrollReveal>

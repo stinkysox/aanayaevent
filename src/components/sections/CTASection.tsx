@@ -11,7 +11,7 @@ const CTASection = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <h2 className="editorial-heading text-4xl md:text-6xl lg:text-7xl text-foreground mb-10">
+          <h2 className="editorial-heading text-4xl md:text-6xl lg:text-7xl mb-10">
             Let's Craft Your
             <br />
             Celebration

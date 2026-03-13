@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
                    <cite className="editorial-subheading not-italic block mb-1">
                      {t.author}
                   </cite>
-                  <span className="editorial-body text-xs">{t.location}</span>
+                  <span className="text-xs text-section-dark-muted">{t.location}</span>
                 </footer>
               </blockquote>
             </ScrollReveal>
