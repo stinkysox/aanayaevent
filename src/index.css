@@ -50,6 +50,15 @@
     --warm-gray: 20 10% 60%;
     --deep-cream: 28 35% 90%;
     --editorial-spacing: 1.8;
+
+    /* Section alternating colors */
+    --section-warm: 30 40% 86%;
+    --section-warm-foreground: 14 60% 15%;
+    --section-dark: 14 68% 14%;
+    --section-dark-foreground: 30 30% 90%;
+    --section-dark-muted: 25 15% 65%;
+    --section-champagne: 35 35% 89%;
+    --section-champagne-foreground: 14 60% 15%;
   }
 
   .dark {
@@ -81,6 +90,14 @@
     --champagne: 30 15% 30%;
     --warm-gray: 20 8% 45%;
     --deep-cream: 20 15% 14%;
+
+    --section-warm: 20 20% 18%;
+    --section-warm-foreground: 30 30% 90%;
+    --section-dark: 14 50% 8%;
+    --section-dark-foreground: 30 30% 90%;
+    --section-dark-muted: 25 15% 55%;
+    --section-champagne: 25 15% 16%;
+    --section-champagne-foreground: 30 30% 90%;
   }
 }
 

@@ -20,24 +20,24 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section className="section-padding bg-section-dark text-section-dark-foreground">
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
         <ScrollReveal>
-          <span className="editorial-subheading block mb-16">Voices</span>
+          <span className="editorial-subheading block mb-16 text-section-dark-muted">Voices</span>
         </ScrollReveal>
 
         <div className="space-y-24">
           {testimonials.map((t, i) => (
             <ScrollReveal key={i} delay={i * 150}>
               <blockquote>
-                <p className="font-serif text-2xl md:text-4xl lg:text-5xl text-foreground font-light leading-tight italic mb-8">
+                <p className="font-serif text-2xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-8">
                   "{t.quote}"
                 </p>
                 <footer>
-                  <cite className="editorial-subheading not-italic block mb-1 text-foreground">
-                    {t.author}
+                   <cite className="editorial-subheading not-italic block mb-1">
+                     {t.author}
                   </cite>
-                  <span className="editorial-body text-xs">{t.location}</span>
+                  <span className="text-xs text-section-dark-muted">{t.location}</span>
                 </footer>
               </blockquote>
             </ScrollReveal>
