@@ -34,13 +34,13 @@ const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20">
-          <Link to="/" className="font-serif text-xl tracking-wide text-foreground">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 flex items-center justify-between h-16 sm:h-20">
+          <Link to="/" className="font-serif text-lg sm:text-xl tracking-wide text-foreground">
             Taaffeite
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-6 lg:gap-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -78,7 +78,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-40 bg-background transition-all duration-500 flex flex-col items-center justify-center gap-8 ${
+        className={`fixed inset-0 z-40 bg-background transition-all duration-500 flex flex-col items-center justify-center gap-6 sm:gap-8 ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -86,7 +86,7 @@ const Navbar = () => {
           <Link
             key={item.path}
             to={item.path}
-            className="font-serif text-3xl text-foreground hover:text-muted-foreground transition-colors"
+            className="font-serif text-2xl sm:text-3xl text-foreground hover:text-muted-foreground transition-colors"
           >
             {item.label}
           </Link>

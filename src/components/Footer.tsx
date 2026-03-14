@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border/50 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
-          <div className="md:col-span-2">
+    <footer className="border-t border-border/50 py-12 sm:py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 sm:gap-12 md:gap-8">
+          <div className="sm:col-span-2">
             <h3 className="font-serif text-2xl text-foreground mb-4">Taaffeite Events</h3>
             <p className="editorial-body max-w-sm">
-              Luxury wedding planners based in Bangalore, crafting rare celebrations
-              with precision, artistry, and sustainable elegance.
+              Event planners based in Bangalore, creating thoughtful celebrations
+              with care, creativity, and attention to detail.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-border/30 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground font-body tracking-wider">
             © 2026 Taaffeite Events. All rights reserved.
           </p>

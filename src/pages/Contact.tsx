@@ -16,31 +16,30 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
   };
 
   return (
     <PageLayout>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
           <ScrollReveal>
             <span className="editorial-subheading block mb-4">Contact</span>
-            <h1 className="editorial-heading text-4xl md:text-6xl lg:text-7xl text-foreground max-w-3xl">
-              Let's Begin
+            <h1 className="editorial-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground max-w-3xl">
+              Let's Talk About
               <br />
-              Your Story
+              Your Event
             </h1>
           </ScrollReveal>
         </div>
       </section>
 
       <section className="pb-24 md:pb-32">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16">
             <div className="lg:col-span-7">
               <ScrollReveal>
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
                     {[
                       { key: "name", label: "Full Name", type: "text" },
                       { key: "email", label: "Email", type: "email" },
@@ -65,7 +64,7 @@ const Contact = () => {
 
                   <div>
                     <label className="editorial-subheading block mb-3">
-                      Tell Us About Your Vision
+                      Tell Us About Your Event
                     </label>
                     <textarea
                       rows={5}
@@ -86,7 +85,7 @@ const Contact = () => {
 
             <div className="lg:col-span-4 lg:col-start-9">
               <ScrollReveal delay={200}>
-                <div className="space-y-10">
+                <div className="space-y-8 sm:space-y-10">
                   <div>
                     <h3 className="editorial-subheading mb-3 text-foreground">Studio</h3>
                     <p className="editorial-body">

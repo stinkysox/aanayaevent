@@ -4,24 +4,24 @@ import PlaceholderImage from "@/components/PlaceholderImage";
 
 const experiences = [
   {
-    title: "Luxury Weddings",
+    title: "Wedding Planning",
     description:
-      "Opulent celebrations designed with exquisite attention to detail. Every element — from couture linens to hand-arranged florals — is curated to create an atmosphere of refined grandeur.",
+      "From venue scouting to vendor coordination, we handle everything so you can focus on enjoying your big day. We work within your budget to create something beautiful.",
   },
   {
     title: "Destination Weddings",
     description:
-      "We transform the world's most breathtaking locations into intimate celebration spaces. Our destination expertise spans palaces, beaches, vineyards, and private islands.",
+      "Dreaming of a wedding in Goa, Jaipur, or Udaipur? We plan and coordinate destination events across India, taking care of travel logistics, local vendors, and on-ground management.",
   },
   {
-    title: "Bespoke Decor",
+    title: "Decor & Styling",
     description:
-      "Our atelier creates one-of-a-kind installations that transcend decoration. Each piece is conceived as a work of art — sculptural, evocative, and uniquely yours.",
+      "Our decor team creates custom setups — from floral installations and mandaps to table settings and lighting — all designed around your personal style.",
   },
   {
-    title: "Full Wedding Planning",
+    title: "Day-of Coordination",
     description:
-      "From the first conversation to the last dance, we orchestrate every detail. Our comprehensive planning ensures a seamless, stress-free journey to your perfect celebration.",
+      "Already have your plans in place? We step in on the day to manage timelines, vendors, and all the moving parts so everything runs smoothly.",
   },
 ];
 
@@ -29,23 +29,23 @@ const Experiences = () => {
   return (
     <PageLayout>
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
           <ScrollReveal>
-            <span className="editorial-subheading block mb-4">Experiences</span>
-            <h1 className="editorial-heading text-4xl md:text-6xl lg:text-7xl text-foreground max-w-4xl">
-              Signature
+            <span className="editorial-subheading block mb-4">Services</span>
+            <h1 className="editorial-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground max-w-4xl">
+              What We
               <br />
-              Celebrations
+              Offer
             </h1>
           </ScrollReveal>
         </div>
       </section>
 
       {experiences.map((exp, i) => (
-        <section key={exp.title} className={`py-16 md:py-24 ${i % 2 === 1 ? "bg-card" : ""}`}>
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <section key={exp.title} className={`py-12 sm:py-16 md:py-24 ${i % 2 === 1 ? "bg-card" : ""}`}>
+          <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
             <div
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center ${
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center ${
                 i % 2 === 1 ? "direction-reverse" : ""
               }`}
             >

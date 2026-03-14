@@ -160,9 +160,14 @@
     line-height: 1.1;
   }
 
-  /* Custom scrollbar */
+  /* Custom scrollbar — all devices */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary)) hsl(var(--deep-cream));
+  }
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
     background: hsl(var(--deep-cream));
@@ -173,6 +178,13 @@
   }
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.8);
+  }
+
+  /* Hide default cursor on desktop when custom cursor is active */
+  @media (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
   }
 }
 
