@@ -12,45 +12,37 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background placeholder */}
-      <div
-        className="absolute inset-0 placeholder-image"
-        style={{ transform: `translateY(${offsetY}px)` }}
-      >
-        <span className="editorial-subheading text-muted-foreground/30">Hero Image</span>
-      </div>
-
+    <section className="relative h-screen overflow-hidden bg-primary">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-foreground/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-primary/40" />
 
       {/* Content */}
       <div
-        className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-28 px-6 md:px-12 max-w-7xl mx-auto"
+        className="relative z-10 h-full flex flex-col justify-end pb-16 sm:pb-20 md:pb-28 px-5 sm:px-6 md:px-12 max-w-7xl mx-auto"
         style={{ transform: `translateY(${-offsetY * 0.15}px)` }}
       >
-        <h1 className="editorial-heading text-4xl md:text-6xl lg:text-8xl text-foreground max-w-4xl mb-8">
-          Rare Celebrations
+        <h1 className="editorial-heading text-3xl sm:text-4xl md:text-6xl lg:text-8xl text-primary-foreground max-w-4xl mb-6 sm:mb-8">
+          Beautiful Events,
           <br />
-          Crafted with Precision
+          Thoughtfully Planned
         </h1>
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <div className="flex flex-wrap gap-x-8 gap-y-2">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8">
+          <div className="flex flex-wrap gap-x-4 sm:gap-x-8 gap-y-2">
             {[
-              "Luxury Wedding Planners",
-              "Destination Celebrations",
+              "Wedding Planning",
+              "Corporate Events",
               "Bespoke Decor",
-              "Sustainable Events",
+              "Full Coordination",
             ].map((item) => (
-              <span key={item} className="editorial-subheading text-foreground/70">
+              <span key={item} className="editorial-subheading text-primary-foreground/70">
                 {item}
               </span>
             ))}
           </div>
 
-          <Button variant="editorial-outline" size="xl" asChild>
-            <Link to="/portfolio">Explore Celebrations</Link>
+          <Button variant="editorial-outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+            <Link to="/portfolio">View Our Work</Link>
           </Button>
         </div>
       </div>
