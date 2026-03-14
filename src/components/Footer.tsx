@@ -44,9 +44,23 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground font-body tracking-wider">
             © 2026 Taaffeite Events. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground font-body tracking-wider">
-            Bangalore, India
-          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/terms"
+              className="text-xs text-muted-foreground font-body tracking-wider hover:text-foreground transition-colors"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <Link
+              to="/privacy"
+              className="text-xs text-muted-foreground font-body tracking-wider hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-xs text-muted-foreground font-body tracking-wider">
+              Bangalore, India
+            </span>
+          </div>
         </div>
       </div>
     </footer>
