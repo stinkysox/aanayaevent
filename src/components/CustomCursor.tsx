@@ -1,14 +1,20 @@
 import { useEffect, useState, useRef } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const CustomCursor = () => {
-  const isMobile = useIsMobile();
+  const [isMobile, setIsMobile] = useState(true); // default true to avoid flash
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const ringRef = useRef<HTMLDivElement>(null);
   const ringPos = useRef({ x: -100, y: -100 });
   const rafRef = useRef<number>();
+
+  // Detect pointer type
+  useEffect(() => {
+    const hasCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+    setIsMobile(hasCoarsePointer && !hasFinePointer);
+  }, []);
 
   useEffect(() => {
     if (isMobile) return;
