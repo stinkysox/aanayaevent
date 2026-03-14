@@ -180,12 +180,6 @@
     background: hsl(var(--primary) / 0.8);
   }
 
-  /* Hide default cursor on desktop when custom cursor is active */
-  @media (pointer: fine) {
-    * {
-      cursor: none !important;
-    }
-  }
 }
 
 @layer components {
