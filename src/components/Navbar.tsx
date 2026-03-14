@@ -31,11 +31,13 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-background/95 backdrop-blur-sm border-b border-border/50"
-            : "bg-transparent"
+            : ""
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 flex items-center justify-between h-16 sm:h-20">
-          <Link to="/" className="font-serif text-lg sm:text-xl tracking-wide text-foreground">
+          <Link to="/" className={`font-serif text-lg sm:text-xl tracking-wide transition-colors duration-500 ${
+            scrolled ? "text-foreground" : isHomePage ? "text-primary-foreground" : "text-foreground"
+          }`}>
             Taaffeite
           </Link>
 
@@ -46,9 +48,9 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 className={`font-body text-[11px] uppercase tracking-[0.2em] transition-colors duration-300 hover:text-foreground ${
-                  location.pathname === item.path
-                    ? "text-foreground"
-                    : "text-muted-foreground"
+                  !scrolled && isHomePage
+                    ? (location.pathname === item.path ? "text-primary-foreground" : "text-primary-foreground/60")
+                    : (location.pathname === item.path ? "text-foreground" : "text-muted-foreground")
                 }`}
               >
                 {item.label}
@@ -63,13 +65,13 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-5 h-px bg-foreground transition-all duration-300 ${
-                menuOpen ? "rotate-45 translate-y-[3.5px]" : ""
+              className={`block w-5 h-px transition-all duration-300 ${
+                menuOpen ? "rotate-45 translate-y-[3.5px] bg-foreground" : scrolled || !isHomePage ? "bg-foreground" : "bg-primary-foreground"
               }`}
             />
             <span
-              className={`block w-5 h-px bg-foreground transition-all duration-300 ${
-                menuOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
+              className={`block w-5 h-px transition-all duration-300 ${
+                menuOpen ? "-rotate-45 -translate-y-[3.5px] bg-foreground" : scrolled || !isHomePage ? "bg-foreground" : "bg-primary-foreground"
               }`}
             />
           </button>
