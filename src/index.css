@@ -12,15 +12,15 @@
        All other tokens derive from these.
        ======================================== */
 
-    /* Base brand color (Deep Brown #511d10) — H:14 S:68% L:19% */
-    --brand-hue: 14;
-    --brand-sat: 68%;
-    --brand-light: 19%;
+    /* Base brand color (Deep Crimson Red #500000) — H:0 S:100% L:15.7% */
+    --brand-hue: 0;
+    --brand-sat: 100%;
+    --brand-light: 15.7%;
 
-    /* Base cream background (#f2e9e0) — H:25 S:30% L:92% */
-    --cream-hue: 25;
-    --cream-sat: 30%;
-    --cream-light: 92%;
+    /* Base cream background (Warm Ivory #F1E4D5) — H:32 S:45% L:89% */
+    --cream-hue: 32;
+    --cream-sat: 45%;
+    --cream-light: 89%;
 
     /* Accent warm shift (champagne/beige direction) */
     --accent-hue: 30;

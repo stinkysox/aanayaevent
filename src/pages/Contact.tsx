@@ -89,23 +89,30 @@ const Contact = () => {
                   <div>
                     <h3 className="editorial-subheading mb-3 text-foreground">Studio</h3>
                     <p className="editorial-body">
-                      Bangalore, Karnataka
+                      Hyderabad, Telangana
                       <br />
-                      India 560001
+                      India
                     </p>
                   </div>
                   <div>
                     <h3 className="editorial-subheading mb-3 text-foreground">Email</h3>
-                    <p className="editorial-body">info@taaffeite.com</p>
+                    <p className="editorial-body">hello@aanayaevent.com</p>
                   </div>
                   <div>
                     <h3 className="editorial-subheading mb-3 text-foreground">Phone</h3>
-                    <p className="editorial-body">+91 80 1234 5678</p>
+                    <p className="editorial-body">+91 99999 00000</p>
                   </div>
                   <div>
                     <h3 className="editorial-subheading mb-3 text-foreground">Follow</h3>
                     <p className="editorial-body">
-                      Instagram
+                      <a 
+                        href="https://www.instagram.com/aanaya_event" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-foreground transition-colors"
+                      >
+                        Instagram: @aanaya_event
+                      </a>
                       <br />
                       Pinterest
                     </p>
