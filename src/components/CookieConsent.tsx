@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const CONSENT_KEY = "taaffeite-cookie-consent";
+const CONSENT_KEY = "aanaya-cookie-consent";
 
 type ConsentState = {
   essential: boolean;

@@ -133,12 +133,12 @@ const HeroSection = () => {
               max-w-6xl
             "
           >
-            Crafted
+            Designing
             <span className="block italic text-white/65">
-              Celebrations
+              Stories
             </span>
-            Beyond
-            <span className="block">Imagination</span>
+            With
+            <span className="block">Soul</span>
           </motion.h1>
 
           {/* Bottom Area */}
@@ -169,8 +169,9 @@ const HeroSection = () => {
                   md:text-base
                 "
               >
-                Cinematic weddings, immersive event design, and timeless
-                storytelling curated with elegance, emotion, and detail.
+                At Aanaya Events, we transform emotions into celebrations that
+                feel intimate, immersive, and deeply personal. Curating moments
+                with elegance, beauty, and storytelling.
               </p>
 
               {/* Tags */}

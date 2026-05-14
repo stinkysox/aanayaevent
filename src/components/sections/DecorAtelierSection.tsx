@@ -229,9 +229,9 @@ const DecorAtelierSection = () => {
                   mb-10
                 "
               >
-                Setting
+                Curating
                 <span className="block italic text-black/60">
-                  the Scene
+                  With Soul
                 </span>
               </h2>
             </ScrollReveal>
@@ -246,8 +246,9 @@ const DecorAtelierSection = () => {
                   mb-8
                 "
               >
-                Every detail is approached like a visual composition —
-                intentional, atmospheric, and emotionally immersive.
+                Every detail is approached with intention — creating spaces
+                that feel emotionally resonant, atmospheric, and deeply
+                personal.
               </p>
             </ScrollReveal>
 

@@ -8,8 +8,8 @@ const Footer = () => {
           <div className="sm:col-span-2">
             <h3 className="font-serif text-2xl text-foreground mb-4">Aanaya Event</h3>
             <p className="editorial-body max-w-sm">
-              Event planners based in Hyderabad, turning visions into timeless celebrations
-              with care, creativity, and attention to detail.
+              Event planners based in Hyderabad, designing stories with soul and
+              crafting celebrations where every detail holds meaning.
             </p>
           </div>
 

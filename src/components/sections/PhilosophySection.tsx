@@ -110,11 +110,10 @@ const PhilosophySection = () => {
                   mb-10
                 "
               >
-                Crafting
+                Crafted
                 <span className="block italic text-black/60">
-                  Emotion
+                  With Intention
                 </span>
-                Through Design
               </h2>
             </ScrollReveal>
 
@@ -129,9 +128,8 @@ const PhilosophySection = () => {
                   max-w-lg
                 "
               >
-                At Aanaya Events, every celebration is approached like a
-                cinematic experience — layered with atmosphere, intimacy,
-                movement, and emotion.
+                Every event we create begins with understanding the people
+                behind it — their story, personality, culture, and vision.
               </p>
             </ScrollReveal>
 
@@ -143,9 +141,9 @@ const PhilosophySection = () => {
                   max-w-md
                 "
               >
-                We blend editorial aesthetics with thoughtful storytelling to
-                create weddings and events that feel immersive, timeless, and
-                deeply personal.
+                We believe weddings are more than beautifully styled spaces.
+                They are feelings preserved in time — woven together with care
+                and meaning.
               </p>
             </ScrollReveal>
           </motion.div>
@@ -214,8 +212,8 @@ const PhilosophySection = () => {
               "
             >
               <p className="text-sm leading-relaxed text-white/80">
-                Designed with elegance, intimacy, and cinematic storytelling at
-                the core of every experience.
+                Crafting celebrations where emotion, beauty, and storytelling
+                exist in perfect harmony.
               </p>
             </div>
           </motion.div>
@@ -231,22 +229,22 @@ const PhilosophySection = () => {
               {
                 number: "01",
                 title: "Personal",
-                desc: "Every celebration is crafted around your story and emotional journey.",
+                desc: "Every love story carries its own rhythm — we transform those emotions into celebrations that feel deeply personal.",
               },
               {
                 number: "02",
-                title: "Editorial",
-                desc: "Inspired by luxury fashion campaigns and cinematic visual language.",
+                title: "Atmospheric",
+                desc: "We believe weddings are feelings preserved in time — candlelight, blooms, and details woven together with care.",
               },
               {
                 number: "03",
-                title: "Immersive",
-                desc: "Spaces designed to feel atmospheric, emotional, and unforgettable.",
+                title: "Intentional",
+                desc: "From the first conversation to the final celebration, every interaction and design choice is intentional.",
               },
               {
                 number: "04",
                 title: "Timeless",
-                desc: "Elegant aesthetics that remain beautiful for years to come.",
+                desc: "Blending storytelling and refined aesthetics to create experiences that linger long after the music fades.",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 120}>

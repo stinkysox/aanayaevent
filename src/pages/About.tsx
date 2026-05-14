@@ -58,7 +58,7 @@ const About = () => {
               text-white/[0.04]
             "
           >
-            ABOUT
+            AANAYA
           </h2>
         </div>
 
@@ -107,7 +107,7 @@ const About = () => {
                       text-white/50
                     "
                   >
-                    About Aanaya
+                    Founder’s Story
                   </span>
                 </div>
               </ScrollReveal>
@@ -125,11 +125,10 @@ const About = () => {
                     mb-10
                   "
                 >
-                  Crafting
+                  Designing
                   <span className="block italic text-white/65">
-                    Moments
+                    Stories With Soul
                   </span>
-                  That Matter
                 </h1>
               </ScrollReveal>
 
@@ -144,9 +143,11 @@ const About = () => {
                     mb-8
                   "
                 >
-                  Aanaya Events was founded with a simple belief —
-                  celebrations should feel emotional, immersive, and deeply
-                  personal.
+                  I’m Neha Singh, founder of Aanaya Events — a storyteller at
+                  heart. Long before I ever imagined planning weddings, I found
+                  joy in creating things with intention — styling spaces,
+                  crafting by hand, and turning fleeting ideas into something
+                  meaningful.
                 </p>
               </ScrollReveal>
 
@@ -158,9 +159,12 @@ const About = () => {
                     max-w-lg
                   "
                 >
-                  Blending cinematic storytelling, refined aesthetics, and
-                  thoughtful event design, we create experiences that remain
-                  timeless long after the celebration ends.
+                  My years at Google taught me structure and precision, while my
+                  background in fashion and art gave me the freedom to explore
+                  beauty through emotion, texture, colour, and atmosphere. In
+                  weddings, I discovered the perfect intersection of creativity
+                  and feeling — where every detail holds meaning and every
+                  celebration becomes deeply personal.
                 </p>
               </ScrollReveal>
             </motion.div>
@@ -218,7 +222,7 @@ const About = () => {
               <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
                 <PlaceholderImage
                   aspectRatio="3/4"
-                  label="Founder Portrait"
+                  label="Neha Singh Portrait"
                 />
               </div>
 
@@ -243,8 +247,8 @@ const About = () => {
                 "
               >
                 <p className="text-xs md:text-sm leading-relaxed text-black/70">
-                  Creating celebrations rooted in elegance, emotion, and
-                  timeless storytelling.
+                  Crafting celebrations where emotion, beauty, and storytelling
+                  exist in perfect harmony.
                 </p>
               </div>
             </motion.div>
@@ -273,7 +277,7 @@ const About = () => {
                         text-black/50
                       "
                     >
-                      Our Story
+                      Our Philosophy
                     </span>
                   </div>
 
@@ -287,9 +291,9 @@ const About = () => {
                       text-black
                     "
                   >
-                    Designed
+                    Crafted
                     <span className="block italic text-black/60">
-                      With Heart
+                      With Intention
                     </span>
                   </h2>
                 </div>
@@ -299,9 +303,11 @@ const About = () => {
             {/* RIGHT */}
             <div className="lg:col-span-7 lg:col-start-6 space-y-10">
               {[
-                "Every event we create begins with understanding the people behind it — their story, personality, culture, and vision.",
-                "From intimate ceremonies to large-scale weddings, our process focuses on atmosphere, emotional detail, and thoughtful execution.",
-                "Our close-knit team combines event styling, decor artistry, hospitality, and creative direction to craft celebrations that feel cinematic yet deeply personal.",
+                "Every love story carries its own rhythm — a fleeting glance, a quiet promise, a cherished memory that begins it all. At Aanaya Events, we transform those emotions into celebrations that feel intimate, immersive, and deeply personal.",
+
+                "We believe weddings are more than beautifully styled spaces. They are feelings preserved in time — candlelight flickering softly across a table, blooms filling the air with fragrance, laughter echoing through the night, and details woven together with care and meaning.",
+
+                "From our first conversation to the final celebration, every interaction is intentional. We blend storytelling, refined aesthetics, hospitality, and thoughtful design to create experiences that linger long after the music fades — because some moments are not simply meant to be seen, but truly felt.",
               ].map((text, i) => (
                 <ScrollReveal key={i} delay={i * 120}>
                   <p
@@ -331,15 +337,15 @@ const About = () => {
             {[
               {
                 number: "120+",
-                label: "Events Designed",
+                label: "Celebrations Curated",
               },
               {
                 number: "85+",
-                label: "Happy Clients",
+                label: "Couples Served",
               },
               {
                 number: "6+",
-                label: "Years Experience",
+                label: "Years Of Storytelling",
               },
             ].map((stat, i) => (
               <ScrollReveal key={stat.label} delay={i * 120}>

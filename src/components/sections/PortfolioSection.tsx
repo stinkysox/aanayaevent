@@ -118,11 +118,11 @@ const PortfolioSection = () => {
                 max-w-5xl
               "
             >
-              Elegant
+              Moments
               <span className="block italic text-primary-foreground/60">
-                Stories
+                Captured,
               </span>
-              Beautifully Told
+              Stories Told
             </h2>
           </ScrollReveal>
         </div>
