@@ -1,28 +1,32 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import {
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 
 const stories = [
   {
     title: "Royal Crimson Wedding",
-    location: "Hyderabad",
+    image:
+      "https://i.postimg.cc/x8bgy3mZ/vivekkrishnanphotography-122.jpg",
   },
   {
     title: "Marigold Haldi Rituals",
-    location: "Secunderabad",
+    image:
+      "https://i.postimg.cc/QC1YrZb1/Boulder-Haldi-102.jpg",
   },
   {
     title: "Ivory Garden Soirée",
-    location: "Banjara Hills",
+    image:
+      "https://i.postimg.cc/524Jps4r/1-12.jpg",
   },
   {
     title: "Modern Reception Gala",
-    location: "HITEC City",
+    image:
+      "https://i.postimg.cc/cHX4MPY9/All-pics-541.jpg",
   },
 ];
 
@@ -194,11 +198,21 @@ const PortfolioSection = () => {
                       rounded-[2rem]
                     "
                   >
-                    <PlaceholderImage
-                      aspectRatio={
-                        i % 2 === 0 ? "16/9" : "4/5"
-                      }
-                      label={story.title}
+                    <ShimmerImage
+                      src={story.image}
+                      alt={story.title}
+                      className={`
+                        w-full
+                        object-cover
+                        transition-transform
+                        duration-700
+                        hover:scale-105
+                        ${
+                          i % 2 === 0
+                            ? "aspect-[16/9]"
+                            : "aspect-[4/5]"
+                        }
+                      `}
                     />
                   </div>
                 </motion.div>
@@ -229,19 +243,6 @@ const PortfolioSection = () => {
                     }
                   `}
                 >
-                  <span
-                    className="
-                      uppercase
-                      tracking-[0.3em]
-                      text-[10px]
-                      text-primary-foreground/40
-                      block
-                      mb-5
-                    "
-                  >
-                    {story.location}
-                  </span>
-
                   <h3
                     className="
                       font-serif

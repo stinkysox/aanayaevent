@@ -1,58 +1,13 @@
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["Wedding", "Haldi", "Reception", "Other"];
-
-const galleryItems = [
-  {
-    category: "Wedding",
-    title: "Royal Crimson Celebration",
-    location: "Hyderabad",
-  },
-  {
-    category: "Wedding",
-    title: "Traditional South Vows",
-    location: "Secunderabad",
-  },
-  {
-    category: "Wedding",
-    title: "Ivory & Gold Mandap",
-    location: "Hyderabad",
-  },
-  {
-    category: "Haldi",
-    title: "Marigold Dreams",
-    location: "Gachibowli",
-  },
-  {
-    category: "Haldi",
-    title: "Sun-Kissed Rituals",
-    location: "Banjara Hills",
-  },
-  {
-    category: "Reception",
-    title: "Starlight Soirée",
-    location: "HITEC City",
-  },
-  {
-    category: "Reception",
-    title: "Midnight Bloom",
-    location: "Jubilee Hills",
-  },
-  {
-    category: "Other",
-    title: "Decor Details",
-    location: "Hyderabad",
-  },
-  {
-    category: "Other",
-    title: "Bespoke Arrangements",
-    location: "Hyderabad",
-  },
-];
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
+import {
+  galleryItems,
+  categories,
+} from "@/data/portfolio";
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Wedding");
@@ -207,7 +162,7 @@ const Portfolio = () => {
                   </span>
 
                   <div className="space-y-5">
-                    {categories.map((category, i) => (
+                    {categories.map((category) => (
                       <button
                         key={category}
                         onClick={() => setActiveCategory(category)}
@@ -366,20 +321,22 @@ const Portfolio = () => {
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.8 }}
                     >
-                      <PlaceholderImage
-                        aspectRatio={
-                          i % 3 === 0
-                            ? "3/4"
-                            : i % 2 === 0
-                            ? "1/1"
-                            : "4/5"
-                        }
-                        label={item.title}
-                        className="
-                          bg-primary/5
+                      <ShimmerImage
+                        src={item.image}
+                        alt={item.title}
+                        className={`
+                          w-full
+                          object-cover
                           transition-all
                           duration-700
-                        "
+                          ${
+                            i % 3 === 0
+                              ? "aspect-[3/4]"
+                              : i % 2 === 0
+                              ? "aspect-square"
+                              : "aspect-[4/5]"
+                          }
+                        `}
                       />
                     </motion.div>
 
@@ -409,19 +366,6 @@ const Portfolio = () => {
                           duration-500
                         "
                       >
-                        <span
-                          className="
-                            uppercase
-                            tracking-[0.3em]
-                            text-[10px]
-                            text-white/50
-                            block
-                            mb-3
-                          "
-                        >
-                          {item.location}
-                        </span>
-
                         <h3
                           className="
                             font-serif

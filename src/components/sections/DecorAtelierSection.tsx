@@ -1,28 +1,51 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 
 const atelierItems = [
   {
     number: "01",
-    title: "Floral Design",
-    desc: "Fresh florals and sculptural arrangements designed with emotion and atmosphere in mind.",
+    title: "Thoughtful Styling",
+    desc: "Carefully curated visual details designed to create emotion, atmosphere, and timeless beauty.",
   },
   {
     number: "02",
-    title: "Tablescapes",
-    desc: "Layered textures, refined table styling, and intimate editorial compositions.",
+    title: "Editorial Aesthetics",
+    desc: "A refined balance of textures, composition, and storytelling inspired by modern luxury celebrations.",
   },
   {
     number: "03",
-    title: "Lighting",
-    desc: "Warm cinematic lighting crafted to transform the emotional tone of the space.",
+    title: "Immersive Experiences",
+    desc: "Spaces designed to feel intimate, cinematic, and emotionally memorable from every perspective.",
   },
   {
     number: "04",
-    title: "Stage & Mandap",
-    desc: "Architectural ceremony spaces tailored to your celebration and visual identity.",
+    title: "Timeless Celebrations",
+    desc: "Elegant environments crafted with intention to reflect each celebration in a deeply personal way.",
+  },
+];
+
+const atelierImages = [
+  {
+    image:
+      "https://i.postimg.cc/yNNV6v2f/1-5.jpg",
+    aspect: "3/4",
+  },
+  {
+    image:
+      "https://i.postimg.cc/6qnbNx0h/Boulder-Haldi-145.jpg",
+    aspect: "1/1",
+  },
+  {
+    image:
+      "https://i.postimg.cc/v82Z1FGD/All-pics-229.jpg",
+    aspect: "4/5",
+  },
+  {
+    image:
+      "https://i.postimg.cc/W3FTgtNj/1-4.jpg",
+    aspect: "3/4",
   },
 ];
 
@@ -116,7 +139,7 @@ const DecorAtelierSection = () => {
                   text-black/60
                 "
               >
-                Decor Atelier
+                Editorial Atelier
               </span>
             </div>
 
@@ -130,9 +153,17 @@ const DecorAtelierSection = () => {
                     transition={{ duration: 0.4 }}
                     className="overflow-hidden rounded-[2rem]"
                   >
-                    <PlaceholderImage
-                      aspectRatio="3/4"
-                      label="Floral Design"
+                    <ShimmerImage
+                      src={atelierImages[0].image}
+                      alt="Editorial Celebration"
+                      className="
+                        w-full
+                        object-cover
+                        aspect-[3/4]
+                        transition-transform
+                        duration-700
+                        hover:scale-105
+                      "
                     />
                   </motion.div>
                 </ScrollReveal>
@@ -147,9 +178,17 @@ const DecorAtelierSection = () => {
                       ml-6
                     "
                   >
-                    <PlaceholderImage
-                      aspectRatio="1/1"
-                      label="Lighting"
+                    <ShimmerImage
+                      src={atelierImages[1].image}
+                      alt="Luxury Celebration"
+                      className="
+                        w-full
+                        object-cover
+                        aspect-square
+                        transition-transform
+                        duration-700
+                        hover:scale-105
+                      "
                     />
                   </motion.div>
                 </ScrollReveal>
@@ -163,9 +202,17 @@ const DecorAtelierSection = () => {
                     transition={{ duration: 0.4 }}
                     className="overflow-hidden rounded-[2rem]"
                   >
-                    <PlaceholderImage
-                      aspectRatio="4/5"
-                      label="Tablescape"
+                    <ShimmerImage
+                      src={atelierImages[2].image}
+                      alt="Modern Editorial Decor"
+                      className="
+                        w-full
+                        object-cover
+                        aspect-[4/5]
+                        transition-transform
+                        duration-700
+                        hover:scale-105
+                      "
                     />
                   </motion.div>
                 </ScrollReveal>
@@ -180,9 +227,17 @@ const DecorAtelierSection = () => {
                       -ml-6
                     "
                   >
-                    <PlaceholderImage
-                      aspectRatio="3/4"
-                      label="Mandap Design"
+                    <ShimmerImage
+                      src={atelierImages[3].image}
+                      alt="Elegant Atmosphere"
+                      className="
+                        w-full
+                        object-cover
+                        aspect-[3/4]
+                        transition-transform
+                        duration-700
+                        hover:scale-105
+                      "
                     />
                   </motion.div>
                 </ScrollReveal>
@@ -212,7 +267,7 @@ const DecorAtelierSection = () => {
                     text-black/50
                   "
                 >
-                  Decor Studio
+                  Editorial Studio
                 </span>
               </div>
             </ScrollReveal>
@@ -229,9 +284,9 @@ const DecorAtelierSection = () => {
                   mb-10
                 "
               >
-                Curating
+                Curated
                 <span className="block italic text-black/60">
-                  With Soul
+                  With Intention
                 </span>
               </h2>
             </ScrollReveal>
@@ -246,17 +301,17 @@ const DecorAtelierSection = () => {
                   mb-8
                 "
               >
-                Every detail is approached with intention — creating spaces
-                that feel emotionally resonant, atmospheric, and deeply
-                personal.
+                Every celebration is approached through emotion, storytelling,
+                atmosphere, and refined visual composition — creating moments
+                that feel immersive and timeless.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
               <p className="text-black/55 leading-relaxed">
-                From sculptural florals to cinematic lighting and layered
-                textures, our atelier creates spaces that feel intimate,
-                luxurious, and unforgettable.
+                Through layered textures, thoughtful styling, and cinematic
+                aesthetics, each space is transformed into an experience that
+                feels intimate, elevated, and unforgettable.
               </p>
             </ScrollReveal>
 
@@ -279,9 +334,9 @@ const DecorAtelierSection = () => {
                     text-black/70
                   "
                 >
-                  “Design is not decoration —
+                  “Atmosphere is what transforms
                   <br />
-                  it is atmosphere.”
+                  a moment into a memory.”
                 </p>
               </div>
             </ScrollReveal>

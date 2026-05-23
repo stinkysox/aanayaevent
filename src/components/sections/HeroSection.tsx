@@ -27,16 +27,7 @@ const HeroSection = () => {
         {/* ========================= */}
         {/* MOBILE IMAGE BACKGROUND */}
         {/* ========================= */}
-        <motion.div
-          style={{ scale: imageScale }}
-          className="absolute inset-0 md:hidden"
-        >
-          <img
-            src="https://i.pinimg.com/1200x/51/b4/8e/51b48e1853a57528d7116814e1523f63.jpg"
-            alt="Luxury Wedding"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+    
 
         {/* ========================= */}
         {/* DESKTOP MINIMAL BACKGROUND */}

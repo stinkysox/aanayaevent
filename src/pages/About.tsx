@@ -3,6 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -219,12 +220,13 @@ const About = () => {
               </div>
 
               {/* Image */}
-              <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
-                <PlaceholderImage
-                  aspectRatio="3/4"
-                  label="Neha Singh Portrait"
-                />
-              </div>
+           <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
+  <ShimmerImage
+    src="https://i.postimg.cc/bNrq8Dhg/profile-pic-2.png"
+    alt="Neha Singh Portrait"
+    className="w-full h-full object-cover"
+  />
+</div>
 
               {/* Bottom Quote */}
               <div

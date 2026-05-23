@@ -2,6 +2,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 
 const PhilosophySection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -186,14 +187,20 @@ const PhilosophySection = () => {
             </div>
 
             {/* Main Image */}
-            <div className="relative overflow-hidden rounded-[2.5rem]">
-              <div className="absolute inset-0 bg-black/10 z-10" />
+<div className="relative overflow-hidden rounded-[2.5rem] bg-[#5c0000]">
+  <div className="absolute inset-0 bg-black/10 z-10" />
 
-              <PlaceholderImage
-                aspectRatio="3/4"
-                label="Editorial Wedding"
-              />
-            </div>
+  <ShimmerImage
+    src="https://i.postimg.cc/J7xPZxFB/AE-LOGO-2-(1)-page-0001.jpg"
+    alt="Aanaya Events Editorial Wedding"
+    className="
+      w-full
+      aspect-[3/4]
+      object-cover
+      object-center
+    "
+  />
+</div>
 
             {/* Bottom Floating Text */}
             <div
