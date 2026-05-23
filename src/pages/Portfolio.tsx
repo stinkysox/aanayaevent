@@ -284,7 +284,7 @@ const Portfolio = () => {
             <AnimatePresence mode="popLayout">
               {filteredItems.map((item, i) => (
                 <motion.div
-                  key={item.title}
+                  key={item.image}
                   layout
                   initial={{
                     opacity: 0,
