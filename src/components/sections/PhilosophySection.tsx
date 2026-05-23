@@ -210,20 +210,22 @@ const PhilosophySection = () => {
             >
               <div className="absolute inset-0 bg-black/5 z-10" />
 
-              <ShimmerImage
-                src="https://i.postimg.cc/J7xPZxFB/AE-LOGO-2-(1)-page-0001.jpg"
-                alt="Aanaya Events Editorial Wedding"
-                className="
-                  relative
-                  z-0
-                  w-full
-                  aspect-[4/5]
-                  object-contain
-                  object-center
-                  scale-[0.88]
-                  md:scale-[0.82]
-                "
-              />
+            <ShimmerImage
+  src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
+  alt="Aanaya Events Editorial Wedding"
+  className="
+    relative
+    z-0
+    w-full
+    aspect-[4/5]
+    object-contain
+    object-center
+    scale-[0.88]
+    md:scale-[0.82]
+    rounded-[10px]
+    overflow-hidden
+  "
+/>
             </div>
 
             {/* Bottom Floating Text */}

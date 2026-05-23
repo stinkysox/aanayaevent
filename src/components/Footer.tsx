@@ -10,7 +10,7 @@ const Footer = () => {
             {/* LOGO */}
             <div className="mb-5">
               <ShimmerImage
-                src="https://i.postimg.cc/J7xPZxFB/AE-LOGO-2-(1)-page-0001.jpg"
+                src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
                 alt="Aanaya Event"
                 className="
                   w-40
