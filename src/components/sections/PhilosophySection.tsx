@@ -1,5 +1,4 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ShimmerImage } from "@/components/ui/ShimmerImage";
@@ -12,8 +11,9 @@ const PhilosophySection = () => {
     offset: ["start end", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], [120, -120]);
-  const textY = useTransform(scrollYProgress, [0, 1], [80, -40]);
+  // smoother + less aggressive movement
+  const imageY = useTransform(scrollYProgress, [0, 1], [80, -60]);
+  const textY = useTransform(scrollYProgress, [0, 1], [50, -20]);
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
@@ -21,8 +21,9 @@ const PhilosophySection = () => {
       ref={sectionRef}
       className="
         relative
-        py-32
-        md:py-44
+        py-24
+        md:py-32
+        lg:py-40
         bg-[#f5eee6]
         overflow-hidden
       "
@@ -41,10 +42,11 @@ const PhilosophySection = () => {
       >
         <h2
           className="
-            text-[5rem]
-            sm:text-[8rem]
-            md:text-[14rem]
-            lg:text-[18rem]
+            text-[4rem]
+            sm:text-[7rem]
+            md:text-[10rem]
+            lg:text-[14rem]
+            xl:text-[16rem]
             leading-none
             font-serif
             tracking-[-0.06em]
@@ -59,8 +61,9 @@ const PhilosophySection = () => {
       <div
         className="
           absolute
-          left-6
-          md:left-14
+          left-4
+          md:left-10
+          lg:left-14
           top-0
           bottom-0
           w-px
@@ -73,16 +76,16 @@ const PhilosophySection = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 relative z-10">
         {/* Top Row */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
             style={{ y: textY }}
             className="lg:col-span-5"
           >
             <ScrollReveal>
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-px bg-black/30" />
 
                 <span
@@ -103,12 +106,14 @@ const PhilosophySection = () => {
               <h2
                 className="
                   font-serif
-                  text-5xl
-                  md:text-7xl
+                  text-4xl
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-[5.5rem]
                   leading-[0.95]
                   tracking-[-0.05em]
                   text-black
-                  mb-10
+                  mb-8
                 "
               >
                 Crafted
@@ -125,12 +130,13 @@ const PhilosophySection = () => {
                   text-base
                   md:text-lg
                   leading-relaxed
-                  mb-8
+                  mb-6
                   max-w-lg
                 "
               >
-                Every event we create begins with understanding the people
-                behind it — their story, personality, culture, and vision.
+                Every event we create begins with understanding the
+                people behind it — their story, personality,
+                culture, and vision.
               </p>
             </ScrollReveal>
 
@@ -140,11 +146,13 @@ const PhilosophySection = () => {
                   text-black/55
                   leading-relaxed
                   max-w-md
+                  text-sm
+                  md:text-base
                 "
               >
-                We believe weddings are more than beautifully styled spaces.
-                They are feelings preserved in time — woven together with care
-                and meaning.
+                We believe weddings are more than beautifully styled
+                spaces. They are feelings preserved in time — woven
+                together with care and meaning.
               </p>
             </ScrollReveal>
           </motion.div>
@@ -162,8 +170,9 @@ const PhilosophySection = () => {
             <div
               className="
                 absolute
-                -top-10
-                -left-10
+                -top-8
+                -left-4
+                lg:-left-8
                 z-20
                 hidden
                 md:flex
@@ -173,10 +182,10 @@ const PhilosophySection = () => {
                 backdrop-blur-xl
                 border
                 border-black/10
-                px-6
-                py-4
+                px-5
+                py-3
                 rounded-full
-                shadow-2xl
+                shadow-xl
               "
             >
               <div className="w-3 h-3 rounded-full bg-black" />
@@ -187,76 +196,93 @@ const PhilosophySection = () => {
             </div>
 
             {/* Main Image */}
-<div className="relative overflow-hidden rounded-[2.5rem] bg-[#5c0000]">
-  <div className="absolute inset-0 bg-black/10 z-10" />
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[2rem]
+                md:rounded-[2.5rem]
+                bg-[#5c0000]
+                p-4
+                md:p-6
+                lg:p-8
+              "
+            >
+              <div className="absolute inset-0 bg-black/5 z-10" />
 
-  <ShimmerImage
-    src="https://i.postimg.cc/J7xPZxFB/AE-LOGO-2-(1)-page-0001.jpg"
-    alt="Aanaya Events Editorial Wedding"
-    className="
-      w-full
-      aspect-[3/4]
-      object-cover
-      object-center
-    "
-  />
-</div>
+              <ShimmerImage
+                src="https://i.postimg.cc/J7xPZxFB/AE-LOGO-2-(1)-page-0001.jpg"
+                alt="Aanaya Events Editorial Wedding"
+                className="
+                  relative
+                  z-0
+                  w-full
+                  aspect-[4/5]
+                  object-contain
+                  object-center
+                  scale-[0.88]
+                  md:scale-[0.82]
+                "
+              />
+            </div>
 
             {/* Bottom Floating Text */}
             <div
               className="
                 absolute
-                -bottom-8
+                -bottom-6
                 right-0
-                md:right-8
+                md:right-6
                 bg-black
                 text-white
-                px-8
-                py-6
-                rounded-[2rem]
-                max-w-xs
+                px-6
+                md:px-8
+                py-5
+                rounded-[1.5rem]
+                md:rounded-[2rem]
+                max-w-[260px]
                 z-20
               "
             >
               <p className="text-sm leading-relaxed text-white/80">
-                Crafting celebrations where emotion, beauty, and storytelling
-                exist in perfect harmony.
+                Crafting celebrations where emotion, beauty,
+                and storytelling exist in perfect harmony.
               </p>
             </div>
           </motion.div>
         </div>
 
         {/* Bottom Values */}
-        <div className="mt-32 md:mt-40">
+        <div className="mt-24 md:mt-32 lg:mt-40">
           {/* Top Divider */}
-          <div className="w-full h-px bg-black/10 mb-16" />
+          <div className="w-full h-px bg-black/10 mb-14 md:mb-16" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               {
                 number: "01",
                 title: "Personal",
-                desc: "Every love story carries its own rhythm — we transform those emotions into celebrations that feel deeply personal.",
+                desc: "Every celebration is shaped around emotion, connection, and meaningful storytelling.",
               },
               {
                 number: "02",
                 title: "Atmospheric",
-                desc: "We believe weddings are feelings preserved in time — candlelight, blooms, and details woven together with care.",
+                desc: "Designing immersive spaces filled with warmth, elegance, and cinematic beauty.",
               },
               {
                 number: "03",
                 title: "Intentional",
-                desc: "From the first conversation to the final celebration, every interaction and design choice is intentional.",
+                desc: "Every detail is approached thoughtfully to create a seamless and refined experience.",
               },
               {
                 number: "04",
                 title: "Timeless",
-                desc: "Blending storytelling and refined aesthetics to create experiences that linger long after the music fades.",
+                desc: "Blending modern aesthetics with enduring elegance that never feels temporary.",
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 120}>
                 <motion.div
-                  whileHover={{ y: -10 }}
+                  whileHover={{ y: -8 }}
                   transition={{ duration: 0.4 }}
                   className="
                     group
