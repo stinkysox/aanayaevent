@@ -71,33 +71,6 @@ const DecorAtelierSection = () => {
         overflow-hidden
       "
     >
-      {/* Background Typography */}
-      <div
-        className="
-          absolute
-          top-10
-          left-1/2
-          -translate-x-1/2
-          pointer-events-none
-          select-none
-        "
-      >
-        <h2
-          className="
-            text-[5rem]
-            sm:text-[8rem]
-            md:text-[14rem]
-            xl:text-[18rem]
-            leading-none
-            tracking-[-0.08em]
-            font-serif
-            text-black/[0.03]
-          "
-        >
-          ATELIER
-        </h2>
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -256,8 +229,6 @@ const DecorAtelierSection = () => {
           >
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-px bg-black/20" />
-
                 <span
                   className="
                     uppercase
@@ -317,14 +288,7 @@ const DecorAtelierSection = () => {
 
             {/* Floating Quote */}
             <ScrollReveal delay={400}>
-              <div
-                className="
-                  mt-14
-                  border-l
-                  border-black/20
-                  pl-6
-                "
-              >
+              <div className="mt-14 pl-6">
                 <p
                   className="
                     font-serif
@@ -345,26 +309,18 @@ const DecorAtelierSection = () => {
 
         {/* BOTTOM VALUES */}
         <div className="mt-32 md:mt-40">
-          <div className="w-full h-px bg-black/10 mb-16" />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {atelierItems.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 120}>
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.4 }}
-                  className="
-                    group
-                    relative
-                    border-t
-                    border-black/10
-                    pt-8
-                  "
+                  className="group relative"
                 >
                   <span
                     className="
                       absolute
-                      top-6
+                      top-0
                       right-0
                       text-5xl
                       font-serif

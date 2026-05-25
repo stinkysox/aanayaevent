@@ -1,6 +1,5 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ShimmerImage } from "@/components/ui/ShimmerImage";
@@ -35,47 +34,6 @@ const About = () => {
           md:pt-0
         "
       >
-        {/* Massive Background Typography */}
-        <div
-          className="
-            absolute
-            inset-0
-            flex
-            items-center
-            justify-center
-            pointer-events-none
-            select-none
-          "
-        >
-          <h2
-            className="
-              text-[4rem]
-              sm:text-[7rem]
-              md:text-[14rem]
-              xl:text-[20rem]
-              leading-none
-              tracking-[-0.08em]
-              font-serif
-              text-white/[0.04]
-            "
-          >
-            AANAYA
-          </h2>
-        </div>
-
-        {/* Vertical Line */}
-        <div
-          className="
-            absolute
-            left-6
-            md:left-12
-            top-0
-            bottom-0
-            w-px
-            bg-white/10
-          "
-        />
-
         <div
           className="
             max-w-7xl
@@ -97,8 +55,6 @@ const About = () => {
             >
               <ScrollReveal>
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-px bg-white/20" />
-
                   <span
                     className="
                       uppercase
@@ -220,13 +176,13 @@ const About = () => {
               </div>
 
               {/* Image */}
-           <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
-  <ShimmerImage
-    src="https://i.postimg.cc/bNrq8Dhg/profile-pic-2.png"
-    alt="Neha Singh Portrait"
-    className="w-full h-full object-cover"
-  />
-</div>
+              <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
+                <ShimmerImage
+                  src="https://i.postimg.cc/bNrq8Dhg/profile-pic-2.png"
+                  alt="Neha Singh Portrait"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               {/* Bottom Quote */}
               <div
@@ -269,8 +225,6 @@ const About = () => {
               <ScrollReveal>
                 <div className="sticky top-32">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="w-12 h-px bg-black/20" />
-
                     <span
                       className="
                         uppercase
@@ -354,11 +308,7 @@ const About = () => {
                 <motion.div
                   whileHover={{ y: -10 }}
                   transition={{ duration: 0.4 }}
-                  className="
-                    border-t
-                    border-white/10
-                    pt-10
-                  "
+                  className="pt-10"
                 >
                   <h2
                     className="

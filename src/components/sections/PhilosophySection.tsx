@@ -14,7 +14,6 @@ const PhilosophySection = () => {
   // smoother + less aggressive movement
   const imageY = useTransform(scrollYProgress, [0, 1], [80, -60]);
   const textY = useTransform(scrollYProgress, [0, 1], [50, -20]);
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section
@@ -28,54 +27,6 @@ const PhilosophySection = () => {
         overflow-hidden
       "
     >
-      {/* Massive Background Typography */}
-      <div
-        className="
-          absolute
-          top-20
-          left-1/2
-          -translate-x-1/2
-          pointer-events-none
-          select-none
-          z-0
-        "
-      >
-        <h2
-          className="
-            text-[4rem]
-            sm:text-[7rem]
-            md:text-[10rem]
-            lg:text-[14rem]
-            xl:text-[16rem]
-            leading-none
-            font-serif
-            tracking-[-0.06em]
-            text-black/[0.03]
-          "
-        >
-          AANAYA
-        </h2>
-      </div>
-
-      {/* Floating Vertical Line */}
-      <div
-        className="
-          absolute
-          left-4
-          md:left-10
-          lg:left-14
-          top-0
-          bottom-0
-          w-px
-          bg-black/10
-        "
-      >
-        <motion.div
-          style={{ height: lineHeight }}
-          className="w-full bg-black/40 origin-top"
-        />
-      </div>
-
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 relative z-10">
         {/* Top Row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16 items-center">
@@ -86,8 +37,6 @@ const PhilosophySection = () => {
           >
             <ScrollReveal>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-14 h-px bg-black/30" />
-
                 <span
                   className="
                     uppercase
@@ -164,6 +113,9 @@ const PhilosophySection = () => {
               lg:col-span-6
               lg:col-start-7
               relative
+              flex
+              flex-col
+              gap-5
             "
           >
             {/* Floating Card */}
@@ -208,41 +160,38 @@ const PhilosophySection = () => {
                 lg:p-8
               "
             >
-              <div className="absolute inset-0 bg-black/5 z-10" />
-
-            <ShimmerImage
-  src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
-  alt="Aanaya Events Editorial Wedding"
-  className="
-    relative
-    z-0
-    w-full
-    aspect-[4/5]
-    object-contain
-    object-center
-    scale-[0.88]
-    md:scale-[0.82]
-    rounded-[10px]
-    overflow-hidden
-  "
-/>
+              <ShimmerImage
+                src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
+                alt="Aanaya Events Editorial Wedding"
+                className="
+                  w-full
+                  aspect-[4/5]
+                  object-contain
+                  object-center
+                  scale-[0.9]
+                  md:scale-[0.84]
+                  rounded-[10px]
+                "
+              />
             </div>
 
             {/* Bottom Floating Text */}
             <div
               className="
-                absolute
-                -bottom-6
-                right-0
-                md:right-6
+                self-end
                 bg-black
                 text-white
-                px-6
+                px-5
                 md:px-8
                 py-5
                 rounded-[1.5rem]
                 md:rounded-[2rem]
                 max-w-[260px]
+                md:max-w-[320px]
+                shadow-2xl
+                -mt-10
+                md:-mt-16
+                relative
                 z-20
               "
             >
@@ -256,9 +205,6 @@ const PhilosophySection = () => {
 
         {/* Bottom Values */}
         <div className="mt-24 md:mt-32 lg:mt-40">
-          {/* Top Divider */}
-          <div className="w-full h-px bg-black/10 mb-14 md:mb-16" />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {[
               {
@@ -286,18 +232,12 @@ const PhilosophySection = () => {
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.4 }}
-                  className="
-                    group
-                    relative
-                    border-t
-                    border-black/10
-                    pt-8
-                  "
+                  className="group relative"
                 >
                   <span
                     className="
                       absolute
-                      top-8
+                      top-0
                       right-0
                       text-5xl
                       font-serif
