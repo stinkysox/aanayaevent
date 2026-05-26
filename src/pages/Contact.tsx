@@ -83,43 +83,7 @@ const Contact = () => {
               </ScrollReveal>
             </div>
 
-            <div className="lg:col-span-4 lg:col-start-9">
-              <ScrollReveal delay={200}>
-                <div className="space-y-8 sm:space-y-10">
-                  <div>
-                    <h3 className="editorial-subheading mb-3 text-foreground">Studio</h3>
-                    <p className="editorial-body">
-                      Hyderabad, Telangana
-                      <br />
-                      India
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="editorial-subheading mb-3 text-foreground">Email</h3>
-                    <p className="editorial-body">hello@aanayaevent.com</p>
-                  </div>
-                  <div>
-                    <h3 className="editorial-subheading mb-3 text-foreground">Phone</h3>
-                    <p className="editorial-body">+91 99999 00000</p>
-                  </div>
-                  <div>
-                    <h3 className="editorial-subheading mb-3 text-foreground">Follow</h3>
-                    <p className="editorial-body">
-                      <a 
-                        href="https://www.instagram.com/aanaya_event" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="hover:text-foreground transition-colors"
-                      >
-                        Instagram: @aanaya_event
-                      </a>
-                      <br />
-                      Pinterest
-                    </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
+     
           </div>
         </div>
       </section>

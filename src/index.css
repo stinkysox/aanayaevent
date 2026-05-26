@@ -12,22 +12,22 @@
        All other tokens derive from these.
        ======================================== */
 
-    /* Base brand color (Deep Crimson Red #500000) — H:0 S:100% L:15.7% */
-    --brand-hue: 0;
+    /* EXACT brand crimson → rgba(80, 0, 1, 1) / #500001 */
+    --brand-hue: 359;
     --brand-sat: 100%;
-    --brand-light: 15.7%;
+    --brand-light: 15.9%; /* Updated from 15.7% to perfectly map to rgba(80,0,1) */
 
-    /* Base cream background (Warm Ivory #F1E4D5) — H:32 S:45% L:89% */
+    /* Base cream background (Warm Ivory #F1E4D5) */
     --cream-hue: 32;
     --cream-sat: 45%;
     --cream-light: 89%;
 
-    /* Accent warm shift (champagne/beige direction) */
+    /* Accent warm shift */
     --accent-hue: 30;
     --accent-sat: 25%;
 
     /* ========================================
-       DERIVED TOKENS — auto-generated from brand palette
+       DERIVED TOKENS
        ======================================== */
 
     /* Core */
@@ -40,7 +40,7 @@
     --popover: var(--cream-hue) var(--cream-sat) var(--cream-light);
     --popover-foreground: var(--brand-hue) 60% 15%;
 
-    /* Primary (brand color) */
+    /* Primary */
     --primary: var(--brand-hue) var(--brand-sat) var(--brand-light);
     --primary-foreground: var(--cream-hue) var(--cream-sat) var(--cream-light);
 
@@ -60,7 +60,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Borders & Input */
+    /* Borders & Inputs */
     --border: var(--cream-hue) 20% 82%;
     --input: var(--cream-hue) 20% 82%;
     --ring: var(--brand-hue) var(--brand-sat) var(--brand-light);
@@ -77,16 +77,16 @@
     --sidebar-border: var(--cream-hue) 20% 82%;
     --sidebar-ring: var(--brand-hue) var(--brand-sat) var(--brand-light);
 
-    /* Custom tokens */
+    /* Custom Tokens */
     --champagne: 33 30% 82%;
     --warm-gray: 20 10% 60%;
     --deep-cream: var(--cream-hue) 35% 90%;
     --editorial-spacing: 1.8;
 
     /* ========================================
-       SECTION ALTERNATING COLORS
-       Warm (beige), Dark (inverted), Champagne
+       SECTION COLORS
        ======================================== */
+
     --section-warm: var(--accent-hue) 40% 86%;
     --section-warm-foreground: var(--brand-hue) 60% 15%;
 
@@ -101,21 +101,29 @@
   .dark {
     --background: 14 40% 8%;
     --foreground: 25 30% 92%;
+
     --card: 14 35% 12%;
     --card-foreground: 25 30% 92%;
+
     --popover: 14 35% 12%;
     --popover-foreground: 25 30% 92%;
+
     --primary: 25 30% 88%;
     --primary-foreground: 14 68% 19%;
+
     --secondary: 14 25% 18%;
     --secondary-foreground: 25 30% 88%;
+
     --muted: 14 20% 20%;
     --muted-foreground: 25 15% 60%;
+
     --accent: 20 15% 25%;
     --accent-foreground: 25 30% 88%;
+
     --border: 14 20% 22%;
     --input: 14 20% 22%;
     --ring: 25 30% 88%;
+
     --sidebar-background: 14 35% 10%;
     --sidebar-foreground: 25 30% 88%;
     --sidebar-primary: 25 30% 88%;
@@ -124,15 +132,18 @@
     --sidebar-accent-foreground: 25 30% 88%;
     --sidebar-border: 14 20% 22%;
     --sidebar-ring: 25 30% 88%;
+
     --champagne: 30 15% 30%;
     --warm-gray: 20 8% 45%;
     --deep-cream: 20 15% 14%;
 
     --section-warm: 20 20% 18%;
     --section-warm-foreground: 30 30% 90%;
+
     --section-dark: 14 50% 8%;
     --section-dark-foreground: 30 30% 90%;
     --section-dark-muted: 25 15% 55%;
+
     --section-champagne: 25 15% 16%;
     --section-champagne-foreground: 30 30% 90%;
   }
@@ -155,31 +166,42 @@
     line-height: var(--editorial-spacing);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
     line-height: 1.1;
   }
 
-  /* Custom scrollbar — all devices */
+  /* ========================================
+     CUSTOM SCROLLBAR
+     ======================================== */
+
   * {
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--primary)) hsl(var(--deep-cream));
   }
+
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
+
   ::-webkit-scrollbar-track {
     background: hsl(var(--deep-cream));
   }
+
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--primary));
     border-radius: 4px;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.8);
   }
-
 }
 
 @layer components {
@@ -222,6 +244,7 @@
   .hover-zoom {
     @apply transition-transform duration-700 ease-out;
   }
+
   .hover-zoom:hover {
     transform: scale(1.04);
   }
@@ -236,6 +259,7 @@
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -247,6 +271,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -254,6 +279,11 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

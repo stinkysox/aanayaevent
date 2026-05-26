@@ -44,7 +44,7 @@ const atelierImages = [
   },
   {
     image:
-      "https://i.postimg.cc/W3FTgtNj/1-4.jpg",
+      "https://i.postimg.cc/T10f4F19/vivekkrishnanphotography-91.jpg",
     aspect: "3/4",
   },
 ];
@@ -273,7 +273,7 @@ const DecorAtelierSection = () => {
                 "
               >
                 Every celebration is approached through emotion, storytelling,
-                atmosphere, and refined visual composition — creating moments
+                atmosphere, and refined visual composition creating moments
                 that feel immersive and timeless.
               </p>
             </ScrollReveal>
@@ -282,7 +282,7 @@ const DecorAtelierSection = () => {
               <p className="text-black/55 leading-relaxed">
                 Through layered textures, thoughtful styling, and cinematic
                 aesthetics, each space is transformed into an experience that
-                feels intimate, elevated, and unforgettable.
+                feels intitmate, elevated, and unforgettable.
               </p>
             </ScrollReveal>
 

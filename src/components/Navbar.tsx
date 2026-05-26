@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Gallery", path: "/gallery" },
-  { label: "Contact", path: "/contact" },
+  { label: "Our World", path: "/" },
+  { label: "Who We Are", path: "/about" },
+  { label: "Our Creations", path: "/gallery" },
+  { label: "Reach Us", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -14,9 +14,6 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
-
-  const isHomePage = location.pathname === "/";
-  const isAboutPage = location.pathname === "/about";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,59 +68,9 @@ const Navbar = () => {
             justify-between
           "
         >
-          {/* LEFT */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navItems.slice(0, 2).map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`
-                  relative
-                  uppercase
-                  tracking-[0.28em]
-                  text-[11px]
-                  transition-all
-                  duration-300
-                  ${
-                    lightNavbar
-                      ? "text-white/60 hover:text-white"
-                      : "text-black/50 hover:text-black"
-                  }
-                `}
-              >
-                {item.label}
-
-                {location.pathname === item.path && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className={`
-                      absolute
-                      left-0
-                      -bottom-2
-                      w-full
-                      h-px
-                      ${
-                        lightNavbar
-                          ? "bg-white"
-                          : "bg-black"
-                      }
-                    `}
-                  />
-                )}
-              </Link>
-            ))}
-          </div>
-
-          {/* CENTER LOGO */}
-          <Link
-            to="/"
-            className="
-              absolute
-              left-1/2
-              -translate-x-1/2
-            "
-          >
-            <div className="flex flex-col items-center">
+          {/* LOGO */}
+          <Link to="/">
+            <div className="flex flex-col items-start">
               <span
                 className={`
                   font-serif
@@ -131,11 +78,7 @@ const Navbar = () => {
                   tracking-[-0.04em]
                   transition-colors
                   duration-500
-                  ${
-                    lightNavbar
-                      ? "text-white"
-                      : "text-black"
-                  }
+                  ${lightNavbar ? "text-white" : "text-black"}
                 `}
               >
                 Aanaya
@@ -146,24 +89,20 @@ const Navbar = () => {
                   uppercase
                   tracking-[0.35em]
                   text-[9px]
-                  mt-1
+                  mt-0.5
                   transition-colors
                   duration-500
-                  ${
-                    lightNavbar
-                      ? "text-white/40"
-                      : "text-black/40"
-                  }
+                  ${lightNavbar ? "text-white/40" : "text-black/40"}
                 `}
               >
-                Event Atelier
+                Event
               </span>
             </div>
           </Link>
 
-          {/* RIGHT */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navItems.slice(2).map((item) => (
+          {/* DESKTOP NAVIGATION */}
+          <div className="hidden lg:flex items-center gap-8 ml-auto">
+            {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -192,11 +131,7 @@ const Navbar = () => {
                       -bottom-2
                       w-full
                       h-px
-                      ${
-                        lightNavbar
-                          ? "bg-white"
-                          : "bg-black"
-                      }
+                      ${lightNavbar ? "bg-white" : "bg-black"}
                     `}
                   />
                 )}
@@ -223,16 +158,8 @@ const Navbar = () => {
                 h-px
                 transition-all
                 duration-300
-                ${
-                  menuOpen
-                    ? "rotate-45 translate-y-[4px]"
-                    : ""
-                }
-                ${
-                  lightNavbar
-                    ? "bg-white"
-                    : "bg-black"
-                }
+                ${menuOpen ? "rotate-45 translate-y-[4px]" : ""}
+                ${lightNavbar ? "bg-white" : "bg-black"}
               `}
             />
 
@@ -242,16 +169,8 @@ const Navbar = () => {
                 h-px
                 transition-all
                 duration-300
-                ${
-                  menuOpen
-                    ? "-rotate-45 -translate-y-[4px]"
-                    : ""
-                }
-                ${
-                  lightNavbar
-                    ? "bg-white"
-                    : "bg-black"
-                }
+                ${menuOpen ? "-rotate-45 -translate-y-[4px]" : ""}
+                ${lightNavbar ? "bg-white" : "bg-black"}
               `}
             />
           </button>

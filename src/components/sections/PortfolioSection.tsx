@@ -9,7 +9,7 @@ import { ShimmerImage } from "@/components/ui/ShimmerImage";
 
 const stories = [
   {
-    title: "Royal Crimson Wedding",
+    title: "The Heritage Union",
     image:
       "https://i.postimg.cc/x8bgy3mZ/vivekkrishnanphotography-122.jpg",
   },
@@ -19,7 +19,7 @@ const stories = [
       "https://i.postimg.cc/QC1YrZb1/Boulder-Haldi-102.jpg",
   },
   {
-    title: "Ivory Garden Soirée",
+    title: "The Vintage Symphony",
     image:
       "https://i.postimg.cc/524Jps4r/1-12.jpg",
   },

@@ -65,9 +65,9 @@ const PhilosophySection = () => {
                   mb-8
                 "
               >
-                Crafted
+                Curated
                 <span className="block italic text-black/60">
-                  With Intention
+                  By Distinction
                 </span>
               </h2>
             </ScrollReveal>
@@ -83,9 +83,9 @@ const PhilosophySection = () => {
                   max-w-lg
                 "
               >
-                Every event we create begins with understanding the
-                people behind it — their story, personality,
-                culture, and vision.
+                Great design is felt long before it is noticed. We approach every 
+                celebration as an artistic composition, balancing architectural precision 
+                with the unique emotional frequency of our clients.
               </p>
             </ScrollReveal>
 
@@ -99,14 +99,13 @@ const PhilosophySection = () => {
                   md:text-base
                 "
               >
-                We believe weddings are more than beautifully styled
-                spaces. They are feelings preserved in time — woven
-                together with care and meaning.
+                We strip away the temporary trends to build environments that resonate deeply, 
+                transforming fleeting moments into permanent, beautiful memories.
               </p>
             </ScrollReveal>
           </motion.div>
 
-          {/* Right Image */}
+          {/* Right Image Container */}
           <motion.div
             style={{ y: imageY }}
             className="
@@ -118,62 +117,19 @@ const PhilosophySection = () => {
               gap-5
             "
           >
-            {/* Floating Card */}
-            <div
+            {/* Main Image - Directly styled and rendered without extra bg div */}
+            <ShimmerImage
+              src="https://i.postimg.cc/tCJsH459/1-3.jpg"
+              alt="Aanaya Events Editorial Wedding"
               className="
-                absolute
-                -top-8
-                -left-4
-                lg:-left-8
-                z-20
-                hidden
-                md:flex
-                items-center
-                gap-4
-                bg-white/70
-                backdrop-blur-xl
-                border
-                border-black/10
-                px-5
-                py-3
-                rounded-full
-                shadow-xl
-              "
-            >
-              <div className="w-3 h-3 rounded-full bg-black" />
-
-              <p className="uppercase tracking-[0.25em] text-[10px] text-black/60">
-                Since 2018
-              </p>
-            </div>
-
-            {/* Main Image */}
-            <div
-              className="
-                relative
-                overflow-hidden
+                w-full
+                aspect-[4/5]
+                object-cover
+                object-center
                 rounded-[2rem]
                 md:rounded-[2.5rem]
-                bg-[#5c0000]
-                p-4
-                md:p-6
-                lg:p-8
               "
-            >
-              <ShimmerImage
-                src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
-                alt="Aanaya Events Editorial Wedding"
-                className="
-                  w-full
-                  aspect-[4/5]
-                  object-contain
-                  object-center
-                  scale-[0.9]
-                  md:scale-[0.84]
-                  rounded-[10px]
-                "
-              />
-            </div>
+            />
 
             {/* Bottom Floating Text */}
             <div
@@ -196,8 +152,8 @@ const PhilosophySection = () => {
               "
             >
               <p className="text-sm leading-relaxed text-white/80">
-                Crafting celebrations where emotion, beauty,
-                and storytelling exist in perfect harmony.
+                Bringing fine art sensibilities and precise execution 
+                together in absolute balance.
               </p>
             </div>
           </motion.div>
