@@ -34,7 +34,7 @@ const atelierImages = [
   },
   {
     image:
-      "https://i.postimg.cc/k5zjqxfv/JRC-Mandap-28.jpg",
+      "https://i.postimg.cc/fb8YdYdJ/ALX-Drishtix-Prajnay-189.jpg",
     aspect: "1/1",
   },
   {
@@ -44,7 +44,7 @@ const atelierImages = [
   },
   {
     image:
-      "https://i.postimg.cc/yxdCthxB/DSC06893.jpg",
+      "https://i.postimg.cc/JntZ5t3K/DSC09012.jpg",
     aspect: "3/4",
   },
 ];

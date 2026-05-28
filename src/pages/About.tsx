@@ -391,7 +391,7 @@ const About = () => {
                 <div className="overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] bg-black/5 group relative aspect-[2/3] shadow-2xl shadow-black/10">
                   <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.6 }} className="w-full h-full">
                     <ShimmerImage
-                      src="https://i.postimg.cc/G3gXRzYw/EMP03155.jpg"
+                      src="https://i.postimg.cc/j5CP4C6h/DSC02440.jpg"
                       alt="Luxury wedding entrance curation"
                       className="w-full h-full object-cover"
                     />
@@ -409,7 +409,8 @@ const About = () => {
                 <div className="overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] bg-black/5 group relative aspect-[4/3] w-11/12 lg:w-full mx-auto">
                   <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.6 }} className="w-full h-full">
                     <ShimmerImage
-                      src="https://i.postimg.cc/m28BBvjP/vivekkrishnanphotography-645.jpg"
+                      src="https://i.postimg.cc/wv3LQ351/BHARGAVI.jpg
+"
                       alt="Atmospheric sensory event lighting"
                       className="w-full h-full object-cover"
                     />
