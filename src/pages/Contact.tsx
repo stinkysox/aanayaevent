@@ -82,8 +82,6 @@ const Contact = () => {
                 </form>
               </ScrollReveal>
             </div>
-
-     
           </div>
         </div>
       </section>

@@ -2,16 +2,24 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const testimonials = [
   {
-    quote: "Aanaya Events made our wedding day absolutely seamless and beautiful.",
-    author: "Priya & Arjun",
+    quote: "I absolutely loved working with Neha. She helped me create a mood board, choose the right colors, and brought everything together beautifully. From the Engagement to the Pellikuthuru, every setup was perfect.",
+    author: "Apurva & Surya",
   },
   {
-    quote: "They understood our vision perfectly and brought it to life beyond what we imagined.",
-    author: "Meera & Rahul",
+    quote: "A big thank you to the team for handling everything so smoothly and creating such an amazing setup despite the morning rain. Sitting on that beautiful mandap felt truly magical.",
+    author: "Ashok & Bhargavi",
   },
   {
-    quote: "Professional, creative, and genuinely caring — exactly what we needed.",
-    author: "Ananya & Vikram",
+    quote: "Even though we were in Australia, the team was always available at odd hours through Google Meet. Every setup felt deeply personal, beautiful, and thoughtfully planned.",
+    author: "Priyanka & Akhil",
+  },
+  {
+    quote: "We absolutely loved the decor and the seamless management. Thank you for making our celebration so incredibly memorable for us.",
+    author: "Drishti & Prajnay",
+  },
+  {
+    quote: "Just wanted to let you know that we loved the decor, and all our guests liked it as well. We are so glad to work with you guys.",
+    author: "Pranathi",
   },
 ];
 
@@ -28,12 +36,12 @@ const TestimonialsSection = () => {
         <div className="space-y-16 sm:space-y-24">
           {testimonials.map((t, i) => (
             <ScrollReveal key={i} delay={i * 150}>
-              <blockquote>
-                <p className="font-serif text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-6 sm:mb-8">
+              <blockquote className="group">
+                <p className="font-serif text-xl sm:text-2xl md:text-4xl lg:text-5xl font-light leading-tight italic mb-6 sm:mb-8 balance">
                   "{t.quote}"
                 </p>
                 <footer>
-                  <cite className="editorial-subheading not-italic block">
+                  <cite className="editorial-subheading not-italic block tracking-widest text-sm uppercase opacity-80">
                     {t.author}
                   </cite>
                 </footer>

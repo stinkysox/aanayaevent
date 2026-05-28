@@ -34,7 +34,7 @@ const atelierImages = [
   },
   {
     image:
-      "https://i.postimg.cc/6qnbNx0h/Boulder-Haldi-145.jpg",
+      "https://i.postimg.cc/k5zjqxfv/JRC-Mandap-28.jpg",
     aspect: "1/1",
   },
   {
@@ -44,7 +44,7 @@ const atelierImages = [
   },
   {
     image:
-      "https://i.postimg.cc/T10f4F19/vivekkrishnanphotography-91.jpg",
+      "https://i.postimg.cc/yxdCthxB/DSC06893.jpg",
     aspect: "3/4",
   },
 ];
