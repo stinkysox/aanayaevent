@@ -7,7 +7,6 @@ const navItems = [
   { label: "Who We Are", path: "/about" },
   { label: "Our Creations", path: "/gallery" },
   { label: "Reach Us", path: "/contact" },
-  { label: "Our Weddings", path: "/weddings" },
 ];
 
 const Navbar = () => {
@@ -22,7 +21,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,14 +28,18 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [location]);
 
-  const isDarkHeroPage = ["/", "/about", "/gallery", "/weddings"].includes(location.pathname);
+  // Added /contact
+  const isDarkHeroPage = [
+    "/",
+    "/about",
+    "/gallery",
+    "/contact",
+  ].includes(location.pathname);
+
   const lightNavbar = isDarkHeroPage || scrolled || menuOpen;
 
   return (
     <>
-      {/* ======================= */}
-      {/* NAVBAR */}
-      {/* ======================= */}
       <motion.nav
         initial={{ y: -80 }}
         animate={{ y: 0 }}
@@ -69,25 +71,22 @@ const Navbar = () => {
             justify-between
           "
         >
-          {/* LOGO IMAGE */}
+          {/* LOGO */}
           <Link to="/" className="flex items-center h-full">
-      <img
-  src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
-  alt="Aanaya Events Logo"
-  className={`
-    h-[72px]
-    md:h-[90px]
-    w-auto
-    object-contain
-    rounded-lg
-    transition-all
-    duration-500
-    ${lightNavbar ? "brightness-100" : "brightness-0"}
-  `}
-/>
+            <img
+              src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
+              alt="Aanaya Events Logo"
+              className="
+                h-[72px]
+                md:h-[90px]
+                w-auto
+                object-contain
+                rounded-lg
+              "
+            />
           </Link>
 
-          {/* DESKTOP NAVIGATION */}
+          {/* DESKTOP NAV */}
           <div className="hidden lg:flex items-center gap-8 ml-auto">
             {navItems.map((item) => (
               <Link
@@ -126,7 +125,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="
@@ -164,9 +163,7 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* ======================= */}
       {/* MOBILE MENU */}
-      {/* ======================= */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
