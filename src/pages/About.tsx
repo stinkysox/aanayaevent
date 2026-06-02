@@ -4,42 +4,42 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { 
-  Compass, 
-  Music, 
-  Users, 
-  Camera, 
-  Handshake, 
-  Sparkles 
+  Maximize2,     // Representing spatial architecture and custom layouts
+  Sliders,       // Representing orchestrating complex sensory/artistic production
+  ConciergeBell, // Elevating hospitality to premium concierge care
+  Film,          // Moving from standard "camera" to editorial cinematography/frames
+  Layers,        // Fine vendor coordination and multi-party layering
+  Wind           // Ethereal execution, moving from standard sparkles to atmospheric magic
 } from "lucide-react";
 
 const services = [
   {
-    icon: Compass,
+    icon: Maximize2,
     title: "Decor & Designing",
     desc: "Crafting atmospheric spatial designs, custom textures, and immersive visual storytelling tailored to your environment.",
   },
   {
-    icon: Music,
+    icon: Sliders,
     title: "Entertainment Management",
     desc: "Curating seamless artistic line-ups, high-end sensory production, and captivating structural sequencing.",
   },
   {
-    icon: Users,
+    icon: ConciergeBell,
     title: "Hospitality & Guest Logistics",
     desc: "Providing elevated concierge care, meticulous transport routing across devices, and intentional guest experiences.",
   },
   {
-    icon: Camera,
+    icon: Film,
     title: "Photography & Wedding Content Creation",
     desc: "Preserving every frame with editorial-grade cinematography, documentary storytelling, and real-time digital curation.",
   },
   {
-    icon: Handshake,
+    icon: Layers,
     title: "Vendor Referrals & Coordination",
     desc: "Connecting you with premium elite artisans while orchestrating frictionless on-site management across all parties.",
   },
   {
-    icon: Sparkles,
+    icon: Wind,
     title: "End-to-End Wedding Planning Services",
     desc: "A completely unified comprehensive execution from the spark of first conceptual drafting to post-celebration closure.",
   },
@@ -187,77 +187,13 @@ const About = () => {
                 lg:mt-0
               "
             >
-              {/* Floating Card */}
-              <div
-                className="
-                  absolute
-                  -top-6
-                  -left-2
-                  md:-top-8
-                  md:-left-8
-                  z-20
-                  flex
-                  items-center
-                  gap-4
-                  bg-white/10
-                  backdrop-blur-xl
-                  border
-                  border-white/10
-                  px-5
-                  md:px-6
-                  py-3
-                  md:py-4
-                  rounded-full
-                "
-              >
-                <div className="w-2 h-2 rounded-full bg-white" />
-
-                <span
-                  className="
-                    uppercase
-                    tracking-[0.25em]
-                    text-[9px]
-                    md:text-[10px]
-                    text-white/70
-                  "
-                >
-                  Hyderabad Based
-                </span>
-              </div>
-
-              {/* Image */}
+              {/* Image Container only */}
               <div className="overflow-hidden rounded-[2rem] md:rounded-[2.5rem]">
                 <ShimmerImage
                   src="https://i.postimg.cc/bNrq8Dhg/profile-pic-2.png"
                   alt="Neha Singh Portrait"
                   className="w-full h-full object-cover"
                 />
-              </div>
-
-              {/* Bottom Quote */}
-              <div
-                className="
-                  absolute
-                  -bottom-6
-                  right-0
-                  md:right-6
-                  bg-white
-                  text-black
-                  px-6
-                  md:px-8
-                  py-5
-                  md:py-6
-                  rounded-[1.5rem]
-                  md:rounded-[2rem]
-                  max-w-[220px]
-                  md:max-w-xs
-                  z-20
-                "
-              >
-                <p className="text-xs md:text-sm leading-relaxed text-black/70">
-                  Crafting celebrations where emotion, beauty, and storytelling
-                  exist in perfect harmony.
-                </p>
               </div>
             </motion.div>
           </div>
@@ -409,8 +345,7 @@ const About = () => {
                 <div className="overflow-hidden rounded-[1.5rem] md:rounded-[2.5rem] bg-black/5 group relative aspect-[4/3] w-11/12 lg:w-full mx-auto">
                   <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.6 }} className="w-full h-full">
                     <ShimmerImage
-                      src="https://i.postimg.cc/wv3LQ351/BHARGAVI.jpg
-"
+                      src="https://i.postimg.cc/wv3LQ351/BHARGAVI.jpg"
                       alt="Atmospheric sensory event lighting"
                       className="w-full h-full object-cover"
                     />
@@ -491,11 +426,11 @@ const About = () => {
                 label: "Celebrations Curated",
               },
               {
-                number: "85+",
+                number: "40+",
                 label: "Couples Served",
               },
               {
-                number: "6+",
+                number: "3+",
                 label: "Years Of Storytelling",
               },
             ].map((stat, i) => (

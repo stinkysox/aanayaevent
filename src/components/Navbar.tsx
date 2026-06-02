@@ -7,6 +7,7 @@ const navItems = [
   { label: "Who We Are", path: "/about" },
   { label: "Our Creations", path: "/gallery" },
   { label: "Reach Us", path: "/contact" },
+  { label: "Our Weddings", path: "/weddings" },
 ];
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [location]);
 
-  const isDarkHeroPage = ["/", "/about", "/gallery"].includes(location.pathname);
+  const isDarkHeroPage = ["/", "/about", "/gallery", "/weddings"].includes(location.pathname);
   const lightNavbar = isDarkHeroPage || scrolled || menuOpen;
 
   return (
@@ -68,36 +69,22 @@ const Navbar = () => {
             justify-between
           "
         >
-          {/* LOGO */}
-          <Link to="/">
-            <div className="flex flex-col items-start">
-              <span
-                className={`
-                  font-serif
-                  text-2xl
-                  tracking-[-0.04em]
-                  transition-colors
-                  duration-500
-                  ${lightNavbar ? "text-white" : "text-black"}
-                `}
-              >
-                Aanaya
-              </span>
-
-              <span
-                className={`
-                  uppercase
-                  tracking-[0.35em]
-                  text-[9px]
-                  mt-0.5
-                  transition-colors
-                  duration-500
-                  ${lightNavbar ? "text-white/40" : "text-black/40"}
-                `}
-              >
-                Event
-              </span>
-            </div>
+          {/* LOGO IMAGE */}
+          <Link to="/" className="flex items-center h-full">
+      <img
+  src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
+  alt="Aanaya Events Logo"
+  className={`
+    h-[72px]
+    md:h-[90px]
+    w-auto
+    object-contain
+    rounded-lg
+    transition-all
+    duration-500
+    ${lightNavbar ? "brightness-100" : "brightness-0"}
+  `}
+/>
           </Link>
 
           {/* DESKTOP NAVIGATION */}

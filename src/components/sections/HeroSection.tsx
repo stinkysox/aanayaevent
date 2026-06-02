@@ -7,31 +7,27 @@ const HeroSection = () => {
       {/* Background Layer */}
       <div className="absolute inset-0 bg-primary z-0" />
 
-      {/* Logo Area */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 1.4,
-          ease: [0.16, 1, 0.3, 1],
-        }}
-        className="relative z-10 w-full flex justify-center mb-10 sm:mb-16 lg:mb-20"
-      >
-        <img
-          src="https://i.postimg.cc/qR6FB3wR/Screenshot-2026-05-23-191725.png"
-          alt="Aanaya Events Logo"
-          className="w-[200px] sm:w-[280px] md:w-[340px] lg:w-[420px] object-contain opacity-95"
-        />
-      </motion.div>
-
       {/* Core Content Area */}
-      <div className="relative z-10 w-full flex flex-col items-center text-center max-w-5xl mx-auto">
+      <div className="relative z-10 w-full flex flex-col items-center text-center max-w-5xl mx-auto mb-12">
+        {/* Subtle Category/Pre-title Tag */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            duration: 1.2,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="mb-6 sm:mb-8"
+        >
+        </motion.div>
+
         {/* Main Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.1,
+            delay: 0.4,
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
           }}
@@ -49,7 +45,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.3,
+            delay: 0.6,
             duration: 1.4,
             ease: [0.16, 1, 0.3, 1],
           }}
@@ -60,6 +56,35 @@ const HeroSection = () => {
           with elegance, beauty, and storytelling.
         </motion.p>
       </div>
+
+      {/* Scroll Visual Cue */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 cursor-pointer"
+        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+      >
+        <span className="uppercase tracking-[0.3em] text-[9px] text-white/30 font-sans">
+          Scroll
+        </span>
+        
+        {/* Minimalist Animated Indicator Line */}
+        <div className="w-[1px] h-12 bg-white/10 relative overflow-hidden rounded-full">
+          <motion.div
+            animate={{
+              y: ["-100%", "100%"],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-white/60"
+          />
+        </div>
+      </motion.div>
+      
     </section>
   );
 };
