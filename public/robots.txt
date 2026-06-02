@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://www.aanayaevents.com/sitemap.xml
+Sitemap: https://www.aanayaevent.com/sitemap.xml
