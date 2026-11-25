@@ -16,6 +16,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Your WhatsApp number formatted (Country Code + Phone number without spaces or symbols)
+    const phoneNumber = "918799997899";
+
+    // Format the message with bold headers and new line breaks (%0A)
+    const textMessage =
+      `*New Event Inquiry*%0A%0A` +
+      `*Name:* ${encodeURIComponent(formData.name)}%0A` +
+      `*Email:* ${encodeURIComponent(formData.email)}%0A` +
+      `*Phone:* ${encodeURIComponent(formData.phone)}%0A` +
+      `*Preferred Date:* ${encodeURIComponent(formData.date)}%0A` +
+      `*Location:* ${encodeURIComponent(formData.location)}%0A` +
+      `*Expected Guests:* ${encodeURIComponent(formData.guests)}%0A` +
+      `*Message:* ${encodeURIComponent(formData.message)}`;
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${textMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
