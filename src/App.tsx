@@ -10,6 +10,7 @@ import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import CookieConsent from "./components/CookieConsent.tsx";
+import FloatingContactButtons from "./components/FloatingContactButtons.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
+        <FloatingContactButtons />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
